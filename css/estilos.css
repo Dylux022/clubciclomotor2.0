@@ -1,0 +1,573 @@
+@charset "UTF-8";
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: silver;
+}
+
+/* Header */
+header {
+  background-color: #4DAEB6;
+  padding: 20px;
+  /* Contenedor del logo y el título */
+  /* Logo */
+  /* Título */
+}
+header .header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+header .logo {
+  width: 100px;
+  height: auto;
+}
+header h1 {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Nav */
+.lista-nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.lista-nav li {
+  margin: 0 10px;
+}
+.lista-nav a {
+  font-family: "Roboto", sans-serif;
+  color: #3DD7B0;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+}
+.lista-nav a:hover {
+  color: #FF5733;
+  text-decoration: underline;
+}
+
+/* Título y texto */
+h2 {
+  margin-top: 40px;
+}
+
+h2, h3 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #D32F2F;
+}
+
+p {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #333;
+  text-align: justify;
+  padding: 5px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid index */
+.contenedor-grid {
+  display: grid;
+  grid-template-areas: "titulo titulo" "texto1 texto1" "imagen1 imagen1" "alerta alerta" "iframe iframe" "texto2 texto2" "texto3 texto3" "testimonios testimonios" "enlaces enlaces";
+  grid-template-columns: 60% 40%;
+  grid-template-rows: auto;
+  gap: 15px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Áreas */
+.titulo1 {
+  grid-area: titulo;
+}
+
+.texto1 {
+  grid-area: texto1;
+}
+
+.imagen1 {
+  grid-area: imagen1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.iframe-inicio {
+  grid-area: iframe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.texto2 {
+  grid-area: texto2;
+}
+
+.texto3 {
+  grid-area: texto3;
+}
+
+.testimonios {
+  grid-area: testimonios;
+}
+
+.alerta-bootstrap {
+  grid-area: alerta;
+}
+
+.explora-mas {
+  grid-area: enlaces;
+  gap: 10px;
+}
+
+/*SOLO EN DESKTOP */
+@media (min-width: 768px) {
+  .contenedor-grid {
+    grid-template-areas: "titulo titulo" "texto1 imagen1" "alerta imagen1" "iframe iframe" "texto2 texto3" "testimonios testimonios" "enlaces enlaces";
+    grid-template-columns: 1fr 1fr;
+  }
+  .imagen1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .imagen1 img {
+    max-width: 100%;
+    width: calc(33.33% - 14px);
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+/* fin grid index*/
+/* Imagen Zanella */
+.zanella {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  border-radius: 8px; /* Bordes redondeados*/
+}
+
+/* Enlace reparación */
+.div-reparacion {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.enlace-reparacion {
+  font-family: "Roboto", sans-serif;
+  color: #3DD7B0;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+}
+
+.enlace-reparacion:hover {
+  color: #FF5733;
+  text-decoration: underline;
+}
+
+/* Testimonios */
+.testimonios {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.testimonios blockquote {
+  background-color: transparent;
+  border-left: none;
+  padding: 0;
+  margin: 20px 0;
+  font-style: italic;
+  font-size: 18px;
+  color: #333;
+  box-shadow: none;
+}
+
+.testimonios footer {
+  margin-top: 10px;
+  color: #CAF0F8;
+  font-weight: bold;
+}
+
+/* Explora Más */
+.explora-mas {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0 auto;
+  background-color: silver;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.explora-mas a {
+  text-decoration: none;
+  color: #3DD7B0;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.explora-mas a:hover {
+  color: #FF5733;
+}
+
+/* Footer */
+footer {
+  background-color: #4DAEB6;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer enlaces */
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer a {
+  color: #3DD7B0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.texto-footer {
+  text-align: center;
+}
+
+.lista-enlaces-footer {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-enlaces-footer li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.lista-enlaces-footer a {
+  color: #3DD7B0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.lista-enlaces-footer a:hover {
+  text-decoration: underline;
+}
+
+.contenedor-gridwiki {
+  display: grid;
+  grid-template-areas: "titulo titulo" "texto1 texto1" "texto2 texto2" "texto3 texto3" "modelos modelos" "texto4 texto4" "texto5 texto5";
+  grid-template-columns: 60% 40%;
+  grid-template-rows: auto;
+  gap: 15px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.contenedor-gridwiki .titulowiki {
+  grid-area: titulo;
+}
+.contenedor-gridwiki .texto-wiki1 {
+  grid-area: texto1;
+}
+.contenedor-gridwiki .texto-wiki2 {
+  grid-area: texto2;
+}
+.contenedor-gridwiki .texto-wiki3 {
+  grid-area: texto3;
+}
+.contenedor-gridwiki .ul-marcas {
+  grid-area: modelos;
+}
+.contenedor-gridwiki .texto-wiki4 {
+  grid-area: texto4;
+}
+.contenedor-gridwiki .texto-wiki5 {
+  grid-area: texto5;
+}
+
+/* Sección wikiciclo */
+.ul-marcas {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+/* Sección reparaciones */
+.Wiki-marcas {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  border-radius: 8px; /* Bordes redondeados*/
+  margin: 10px;
+}
+
+.acordeon-historia.accordion .accordion-item {
+  background-color: #d1d1d1;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+.acordeon-historia.accordion .accordion-button {
+  background-color: #4daeb6 !important;
+  color: white !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  transition: background-color 0.3s ease;
+  box-shadow: none !important;
+}
+.acordeon-historia.accordion .accordion-button::after {
+  filter: brightness(0) invert(1);
+  transform: scale(1.2);
+}
+.acordeon-historia.accordion .accordion-button:not(.collapsed) {
+  background-color: #3dd7b0 !important;
+  color: white !important;
+}
+.acordeon-historia.accordion .accordion-button:focus {
+  box-shadow: none !important;
+  border-color: transparent !important;
+  outline: none !important;
+}
+.acordeon-historia.accordion .accordion-body {
+  background-color: white;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  padding: 20px;
+  text-align: justify;
+}
+.acordeon-historia.accordion .accordion-body img {
+  display: block;
+  margin: 15px auto 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #4daeb6;
+}
+
+.contenedor-grid-reparaciones {
+  display: grid;
+  grid-template-areas: "bienvenida" "importancia" "recomendaciones" "herramientas" "piezas" "video" "formulario";
+  gap: 2rem;
+  padding: 2rem;
+}
+.contenedor-grid-reparaciones .seccion-bienvenida {
+  grid-area: bienvenida;
+}
+.contenedor-grid-reparaciones .seccion-importancia {
+  grid-area: importancia;
+}
+.contenedor-grid-reparaciones .seccion-recomendaciones {
+  grid-area: recomendaciones;
+}
+.contenedor-grid-reparaciones .seccion-herramientas {
+  grid-area: herramientas;
+}
+.contenedor-grid-reparaciones .seccion-piezas {
+  grid-area: piezas;
+}
+.contenedor-grid-reparaciones .seccion-video {
+  grid-area: video;
+}
+.contenedor-grid-reparaciones .seccion-formulario {
+  grid-area: formulario;
+}
+
+/* Entrevista */
+.lista-modificaciones {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.lista-modificaciones li {
+  margin-bottom: 10px; /* Espacio entre los elementos */
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+/* Formulario Picadas y reparaciones */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+form label {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+  color: #333;
+}
+form input,
+form select {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+form button {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #4DAEB6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #3DD7B0;
+}
+
+.iframe-reparaciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.galeria {
+  padding: 2rem;
+  text-align: center;
+  background-color: silver;
+}
+.galeria h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+.galeria .contenedor-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.galeria .item-galeria {
+  background-color: #4DAEB6;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.galeria .item-galeria:hover {
+  transform: scale(1.03);
+}
+.galeria .item-galeria img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.galeria .item-galeria p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  padding: 0.8rem;
+  color: #333;
+}
+
+.ul-picadas {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #FF5733;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.seccion-ubicacion {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.seccion-ubicacion h2 {
+  color: #D32F2F;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 15px;
+}
+.seccion-ubicacion p {
+  font-size: 18px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin-bottom: 15px;
+}
+.seccion-ubicacion iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=estilos.css.map */

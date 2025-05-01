@@ -1,0 +1,217 @@
+
+/* Sección reparaciones */
+.Wiki-marcas {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    border-radius: 8px; /* Bordes redondeados*/
+    margin: 10px;
+}
+
+.iframe-reparaciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+/* Sección picadas */
+.ul-picadas {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: #FF5733;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Sección Ubicación Picódromo */
+.seccion-ubicacion {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo título de la sección */
+.seccion-ubicacion h2 {
+    color: #D32F2F;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 15px;
+}
+
+/* Estilo del párrafo */
+.seccion-ubicacion p {
+    font-size: 18px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin-bottom: 15px;
+}
+
+/* Estilo del iframe (mapa) */
+.seccion-ubicacion iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 10px; 
+}
+
+
+
+/* Sección wikiciclo */
+.ul-marcas {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+}
+
+/* grid reparaciones */
+.contenedor-grid-reparaciones {
+    display: grid;
+    grid-template-areas:
+        "bienvenida"
+        "importancia"
+        "recomendaciones"
+        "herramientas"
+        "piezas"
+        "video"
+        "formulario";
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Asignar las áreas específicas a cada sección */
+.seccion-bienvenida { grid-area: bienvenida; }
+.seccion-importancia { grid-area: importancia; }
+.seccion-recomendaciones { grid-area: recomendaciones; }
+.seccion-herramientas { grid-area: herramientas; }
+.seccion-piezas { grid-area: piezas; }
+.seccion-video { grid-area: video; }
+.seccion-formulario { grid-area: formulario; }
+
+
+/*       MEDIA QUERIES      */
+
+/* Dispositivos pequeños: teléfonos (hasta 767px) */
+@media (max-width: 767px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagen1 img:not(:nth-child(2)) {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .lista-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contenedor-grid {
+        grid-template-areas:
+            "titulo"
+            "texto1"
+            "imagen1"
+            "alerta"
+            "iframe"
+            "texto2"
+            "texto3"
+            "testimonios"
+            "enlaces";
+        grid-template-columns: 100%;
+    }
+
+    .zanella {
+        width: 90%;
+    }
+
+    p {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .ul-picadas {
+        font-size: 22px;
+    }
+
+    .seccion-ubicacion {
+        padding: 10px;
+    }
+
+    .seccion-ubicacion iframe {
+        height: 300px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form label,
+    form input,
+    form select,
+    form button {
+        font-size: 14px;
+    }
+
+    .explora-mas {
+        max-width: 90%;
+    }
+}
+
+/*galeria*/
+.galeria {
+    padding: 2rem;
+    text-align: center;
+    background-color: silver; 
+}
+
+.galeria h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #222; 
+}
+
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item-galeria {
+    background-color:#4DAEB6;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.item-galeria:hover {
+    transform: scale(1.03);
+}
+
+.item-galeria img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.item-galeria p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding: 0.8rem;
+    color: #333;
+}
