@@ -1,0 +1,39 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: silver;
+  }
+  
+  /* Header */
+  header {
+    background-color: #4DAEB6;
+    padding: 20px;
+  
+    /* Contenedor del logo y el título */
+    .header-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    /* Logo */
+    .logo {
+      width: 100px;
+      height: auto;
+    }
+  
+    /* Título */
+    h1 {
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+  }

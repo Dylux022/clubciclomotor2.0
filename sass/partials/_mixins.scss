@@ -1,0 +1,14 @@
+
+@mixin enlace-estilo {
+    font-family: "Roboto", sans-serif;
+    color: #3DD7B0;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+  
+    &:hover {
+      color: #FF5733;
+      text-decoration: underline;
+    }
+  }
+  
