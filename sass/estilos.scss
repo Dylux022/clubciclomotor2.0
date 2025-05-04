@@ -113,7 +113,7 @@ p {
     gap: 10px;
 }
 
-@import './partials/media';
+@import 'partials/media';
 
 
 /* fin grid index*/
@@ -354,44 +354,7 @@ footer a:hover {
     }
   }
   
-  // Grid Reparaciones
-.contenedor-grid-reparaciones {
-    display: grid;
-    grid-template-areas:
-      "bienvenida"
-      "importancia"
-      "recomendaciones"
-      "herramientas"
-      "piezas"
-      "video"
-      "formulario";
-    gap: 2rem;
-    padding: 2rem;
-    
-    // Asignar las áreas específicas a cada sección
-    .seccion-bienvenida { grid-area: bienvenida; }
-    .seccion-importancia { grid-area: importancia; }
-    .seccion-recomendaciones { grid-area: recomendaciones; }
-    .seccion-herramientas { grid-area: herramientas; }
-    .seccion-piezas { grid-area: piezas; }
-    .seccion-video { grid-area: video; }
-    .seccion-formulario { grid-area: formulario; }
-  }
-/* Entrevista */
-.lista-modificaciones {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-.lista-modificaciones li {
-    margin-bottom: 10px; /* Espacio entre los elementos */
-    font-size: 16px;
-    line-height: 1.6;
-    font-weight: 700;
-}
-
+ 
 /* Formulario Picadas y reparaciones */
 form {
     background-color: #fff;
