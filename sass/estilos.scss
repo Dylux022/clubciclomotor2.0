@@ -243,6 +243,46 @@ footer a:hover {
     text-decoration: underline;
 }
 
+
+/*grid reparaciones*/
+.contenedor-grid-reparaciones {
+    display: grid;
+    grid-template-areas: 
+        "bienvenida bienvenida"
+        "mantenimiento mantenimiento"
+        "recomendaciones recomendaciones"
+        "lista-recomendaciones lista-recomendaciones"
+        "herramientas herramientas"
+        "piezas piezas"
+        "lista-piezas lista-piezas"
+        "video video"
+        "formulario formulario";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Áreas individuales */
+.grid-bienvenida       { grid-area: bienvenida; }
+.grid-mantenimiento    { grid-area: mantenimiento; }
+.grid-recomendaciones  { grid-area: recomendaciones; }
+.lista-recomendaciones { grid-area: lista-recomendaciones; text-align: center; 
+  list-style-type: none; /* Elimina los puntos */
+  padding: 0; /* Opcional: elimina el espacio a la izquierda */
+  margin: 0; /* Opcional: elimina márgenes */}
+.grid-herramientas     { grid-area: herramientas; }
+.grid-piezas           { grid-area: piezas; }
+.lista-piezas         { grid-area: lista-piezas; text-align: center; 
+  list-style-type: none; /* Elimina los puntos */
+  padding: 0; /* Opcional: elimina el espacio a la izquierda */
+  margin: 0; /* Opcional: elimina márgenes */}
+.grid-video            { grid-area: video; }
+.grid-formulario       { grid-area: formulario; }
+
+
 // Grid wiki
 .contenedor-gridwiki {
   display: grid;
